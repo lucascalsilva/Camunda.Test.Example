@@ -24,10 +24,10 @@ namespace Camunda.Test.Example
 		}
 
 		[SetUp]
-		public void initialize()
+		public async Task Initialize()
 		{
 			testHelper = new ProcessEngineTestHelper();
-			testHelper.DeployModel("payment-process.bpmn");
+			await testHelper.DeployModel("payment-process.bpmn");
 		}
 
 		[TearDown]
